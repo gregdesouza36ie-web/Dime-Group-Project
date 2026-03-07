@@ -53,14 +53,14 @@ gsap.to(".box2 img", {
   yoyo: true,
   ease: "power1.inOut"
 })
-
+/*
 gsap.to(".box3 img", {
   x: 15,
   duration: 5,
   repeat: -1,
   yoyo: true
 })
-
+*/
 gsap.to(".box4 img", {
   rotation: 5,
   duration: 4,
@@ -74,3 +74,16 @@ gsap.to(".box5 img", {
   repeat: -1,
   yoyo: true
 })
+/*
+document.addEventListener("mousemove", (e) => {
+
+gsap.to(".box1", {
+    x: (e.clientX - window.innerWidth/2) * 0.02
+})
+
+gsap.to(".box2", {
+    x: (e.clientX - window.innerWidth/2) * -0.02
+})
+
+})
+*/
