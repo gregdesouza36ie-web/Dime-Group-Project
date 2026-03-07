@@ -16,13 +16,13 @@ tl.from(".box2", {
   opacity: 0,
   duration: 0.5,
 },"<0.4" )
-
+/*
 tl.from(".box3", {
   y: 200,
   opacity: 0,
   duration: 0.6,
 })
-
+*/
 tl.from(".box4", {
   x: -150,
   y: 150,
@@ -35,3 +35,42 @@ tl.from(".box5", {
   opacity: 0,
     duration: 0.8,
 },"<0.4" )
+
+gsap.to(".box1 img", {
+  y: 20,
+  rotation: -2,
+  duration: 3,
+  repeat: -1,
+  yoyo: true,
+  ease: "power1.inOut"
+})
+
+gsap.to(".box2 img", {
+  y: -20,
+  rotation: -5,
+  duration: 4,
+  repeat: -1,
+  yoyo: true,
+  ease: "power1.inOut"
+})
+
+gsap.to(".box3 img", {
+  x: 15,
+  duration: 5,
+  repeat: -1,
+  yoyo: true
+})
+
+gsap.to(".box4 img", {
+  rotation: 5,
+  duration: 4,
+  repeat: -1,
+  yoyo: true
+})
+
+gsap.to(".box5 img", {
+  rotation: -7,
+  duration: 4,
+  repeat: -1,
+  yoyo: true
+})
