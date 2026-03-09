@@ -5,7 +5,7 @@
 
 body{
     background-color: #fcf6ff;
-    overflow: hidden;
+
 }
 
 h1{
@@ -19,7 +19,7 @@ p{
     font-family: 'Arial', sans-serif;
     color: #000000;
     font-size: clamp(1rem, 2vw, 1.5rem);
-    z-index: 1;
+    z-index: 2;
     background-color: transparent;
 }
 /* navbar */
@@ -38,7 +38,7 @@ p{
   background:rgba(255,255,255,0.6);
 
   border-bottom:1px solid rgba(0,0,0,0.05);
-  z-index:2;
+  z-index:3;
 }
 .logo{
   font-size:22px;
@@ -72,21 +72,24 @@ p{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
-
 }
 
-.box1 img,
+.box1 img{
+    filter: drop-shadow(12px 15px 28px rgba(156, 155, 155, 0.853));
+}
+
 .box5 img{
-    filter: drop-shadow(2px 15px 23px rgba(156, 155, 155, 0.853));
+    filter: drop-shadow(18px 18px 25px rgba(156, 155, 155, 0.562));
 }
 
-.box2 img,
+.box2 img{
+    filter: drop-shadow(-5px 15px 28px rgba(156, 155, 155, 0.853));
+}
 .box4 img{
     filter: drop-shadow(-5px 15px 23px rgba(156, 155, 155, 0.853));
 }
 .section{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -142,4 +145,22 @@ p{
     right: 15%;
    block-size: calc(20vh - 8vh);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -2,9 +2,26 @@ tl=gsap.timeline({defaults: {duration: 1}})
 
 tl.to(".curtain", {
   opacity: 0,
-  duration: 1.1,
+  duration: 1,
   ease: "power2.inOut",
 })
+tl.from(".navbar", {
+  opacity: 0,
+  y: -20,
+  duration: 0.8,
+},"<0.5" )
+tl.from(".home h1", {
+  y: 50,
+  opacity: 0,
+  duration: 0.8,
+},"<0.3" )
+
+tl.from(".home p", {
+  y: 50,
+  opacity: 0,
+  duration: 0.8,
+},"<0.3" )
+
 tl.from(".box1", {
   x: 150,
   opacity: 0,
