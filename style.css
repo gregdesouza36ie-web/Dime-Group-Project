@@ -30,6 +30,7 @@ p{
 
   padding-left: 70px;
   width:100%;
+  height: 25px;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -55,72 +56,95 @@ p{
   text-decoration:none;
   color:#333;
   font-weight:500;
+  transition:0.2s;
+}
+
+.nav-links a:hover{
+  color:rgb(159,59,59);
 }
 
 .cta{
   background:rgb(159, 59, 59);
   color:white;
+  white-space: nowrap; 
   border:1px solid rgba(219, 188, 53, 0.62);
   padding:10px 22px;
   border-radius:25px;
   cursor:pointer;
-  margin-right: 100px;
+  margin-right:60px;
+}
+.mobile-cta{
+  display:none;
 }
 
 .hamburger{
   display:none;
-
+  font-size:1.7rem;
   cursor:pointer;
-  margin-right: 15%;
-  z-index: 3;
 }
 
-.hamburger span{
-  width:25px;
-  height:3px;
-  background:black;
-  display:block;
+
+.nav-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
-@media (max-width: 768px){
-.navbar{
+@media (max-width: 768px) {
 
-width: 100vw;
-display: flex;
-justify-content: space-between;
-
-}
-.nav-links{
-  display: none;
-}
-
-.nav-links.active{
-  position: absolute;
-  width: 100vw;
-  top: 60px;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px;
+    height: auto;
+  }
 
 
-}
-.navbar.active{
- 
-  align-items: flex-start;
-  width: 100vw;
-  height: 10vh;
+  .nav-links {
+    position: relative;
+    left: 5px;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 0;
+    margin-top: 10px;
+    display: none;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
 
-}
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+  }
 
-.cta{
-  display:none;
-}
+  .nav-links.active {
+    display: flex;
+    max-height: 500px;
+    opacity: 1;
+  }
 
-.hamburger{
-display: block;
-}
+  .hamburger {
+    display: block;
+    margin-left: auto;
+    margin-right: 25px;
+    cursor: pointer;
+  }
 
+  .cta {
+    display: none; /* hide original CTA button */
+  }
+
+  .mobile-cta {
+    display: inline-block;
+    margin-left: -10px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: rgb(159, 59, 59);
+    color: white;
+    border: none;
+
+  }
 }
 .home{
     width: 100%;
