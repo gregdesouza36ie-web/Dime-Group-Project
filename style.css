@@ -5,7 +5,7 @@
 
 body{
     background-color: #fcf6ff;
-
+    overflow-x: hidden;
 }
 
 h1{
@@ -15,7 +15,7 @@ h1{
     z-index: 1;
     background-color: transparent;
 }
-p{
+.home p{
     font-family: 'Arial', sans-serif;
     color: #000000;
     font-size: clamp(1rem, 2vw, 1.5rem);
@@ -153,6 +153,7 @@ p{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: -200px;
 }
 
 .box1 img{
@@ -243,4 +244,67 @@ section{
 
 
 
+.intro {
+    color:white;
+    height:100vh;
+    width:100vw;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+}
+.intro p{
+    font-size:50px;
+}
 
+
+/*horizontal scroll*/
+
+#horizontal-scroll {
+    padding-bottom: 300px;
+}
+
+.horizontal-scroll-wrapper {
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+
+}
+
+.horizontal{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left:45vw;
+  color: rgb(0, 0, 0);
+}
+
+.horizontal > div{
+  padding: 0 4.2vw;
+}
+
+.horizontal .card{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 28vw;
+  padding: 50px 30px;
+  border: 2px solid rgba(0, 0, 0, 0.397);
+}
+
+.card h2{
+    color: rgb(0, 0, 0);
+    font-size: 3vw;
+    font-weight: 300;
+}
+
+.card .count{
+  color: rgb(139, 21, 21);
+    font-size: 7vw;
+    font-weight: bold;
+    line-height: 1.4;
+
+}

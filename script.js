@@ -1,3 +1,4 @@
+
 tl=gsap.timeline({defaults: {duration: 1}})
 
 tl.to(".curtain", {
@@ -40,6 +41,9 @@ tl.from(".box3", {
   duration: 0.6,
 })
 */
+
+
+
 tl.from(".box4", {
   x: -150,
   y: 150,
@@ -78,6 +82,7 @@ gsap.to(".box3 img", {
   yoyo: true
 })
 */
+
 gsap.to(".box4 img", {
   rotation: 5,
   duration: 4,
@@ -112,3 +117,45 @@ hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("active")
     navbar.classList.toggle("active")
 })
+
+
+
+
+
+// Initialize a new Lenis instance for smooth scrolling
+const lenis = new Lenis();
+
+// Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
+lenis.on('scroll', ScrollTrigger.update);
+
+// Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
+// This ensures Lenis's smooth scroll animation updates on each GSAP tick
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000); // Convert time from seconds to milliseconds
+});
+
+// Disable lag smoothing in GSAP to prevent any delay in scroll animations
+gsap.ticker.lagSmoothing(0);
+
+
+document.addEventListener("DOMContentLoaded", (event) => 
+  {
+  gsap.registerPlugin(ScrollTrigger); 
+   
+  let horizontalSection = document.querySelector(".horizontal");
+
+  gsap.to(".horizontal", {
+    x: () => -(horizontalSection.scrollWidth - window.innerWidth),
+    scrollTrigger: {
+      markers: true,
+      trigger: ".horizontal",
+      start: "center center",
+      end: () => "+=" + (horizontalSection.scrollWidth),
+      scrub: 1,
+      pin: "#horizontal-scroll",
+      invalidateOnRefresh: true,
+
+    }
+  });
+
+});
