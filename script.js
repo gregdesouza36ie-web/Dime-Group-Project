@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", (event) =>
   gsap.to(".horizontal", {
     x: () => -(horizontalSection.scrollWidth - window.innerWidth),
     scrollTrigger: {
-      markers: true,
+      //markers: true,
       trigger: ".horizontal",
       start: "center center",
       end: () => "+=" + (horizontalSection.scrollWidth),

@@ -146,6 +146,14 @@ h1{
 
   }
 }
+
+.mainlogo{
+border: 2px solid rgb(255, 219, 39);
+border-radius: 15px;
+width: 140px;
+height: 140px;
+
+}
 .home{
     width: 100%;
     height: 100vh;
@@ -271,6 +279,8 @@ section{
 
 }
 
+
+
 .horizontal{
   display: flex;
   align-items: center;
@@ -280,7 +290,7 @@ section{
 }
 
 .horizontal > div{
-  padding: 0 4.2vw;
+  padding: 0 4.1vw;
 }
 
 .horizontal .card{
@@ -307,4 +317,17 @@ section{
     font-weight: bold;
     line-height: 1.4;
 
+}
+
+
+@media (max-width: 768px) {
+  #horizontal-scroll {
+    padding-bottom: -150px; /* Reduce bottom padding on mobile */
+  }
+  .horizontal{
+    padding-left: 100vw;
+  }
+  .horizontal-scroll-wrapper {
+    height: 40vh; /* Reduce height on mobile to bring scroll trigger closer */
+  }
 }
