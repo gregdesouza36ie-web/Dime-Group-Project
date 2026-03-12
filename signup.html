@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign Up — ÉireID</title>
+</head>
+<body class="signup-page">
+<nav class="navbar">
+  <div class="nav-top">
+    <a href="index.html" class="logo">ÉireID</a>
+    <div class="hamburger" aria-label="Toggle menu">
+      <strong>☰</strong>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#horizontal-scroll">Features</a></li>
+    <li><a href="index.html">Security</a></li>
+    <li><a href="index.html">Pricing</a></li>
+    <li><a href="signup.html" class="cta mobile-cta">Sign Up</a></li>
+  </ul>
+  <a href="signup.html" class="cta">Sign Up</a>
+</nav>
+
+<main class="signup-main">
+  <section class="signup-section">
+    <h1 class="signup-title">Create your account</h1>
+    <p class="signup-subtitle">Your trusted digital companion. Fill in your details below.</p>
+
+    <div id="signup-success" class="signup-success" hidden>
+      <p class="signup-success-icon" aria-hidden="true">✓</p>
+      <h2>You're all set</h2>
+      <p>Check your email to verify your account and get started.</p>
+    </div>
+
+    <form id="signup-form" class="signup-form" action="#" method="post" novalidate>
+      <div class="signup-form-row">
+        <div class="form-group">
+          <label for="first-name">First name <span class="required">*</span></label>
+          <input type="text" id="first-name" name="first-name" placeholder="John" required autocomplete="given-name">
+          <span class="form-error" id="error-first-name" role="alert"></span>
+        </div>
+        <div class="form-group">
+          <label for="last-name">Last name <span class="required">*</span></label>
+          <input type="text" id="last-name" name="last-name" placeholder="Doe" required autocomplete="family-name">
+          <span class="form-error" id="error-last-name" role="alert"></span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email <span class="required">*</span></label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+        <span class="form-error" id="error-email" role="alert"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" name="phone" placeholder="+353 1 234 5678" autocomplete="tel">
+        <span class="form-error" id="error-phone" role="alert"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password <span class="required">*</span></label>
+        <input type="password" id="password" name="password" placeholder="At least 8 characters" required autocomplete="new-password" minlength="8">
+        <span class="form-error" id="error-password" role="alert"></span>
+        <span class="form-hint">Minimum 8 characters, include a number and a letter.</span>
+      </div>
+
+      <div class="form-group">
+        <label for="confirm-password">Confirm password <span class="required">*</span></label>
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" required autocomplete="new-password">
+        <span class="form-error" id="error-confirm-password" role="alert"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="country">Country / Region</label>
+        <select id="country" name="country" autocomplete="country">
+          <option value="">Select country</option>
+          <option value="IE">Ireland</option>
+          <option value="GB">United Kingdom</option>
+          <option value="US">United States</option>
+          <option value="DE">Germany</option>
+          <option value="FR">France</option>
+          <option value="ES">Spain</option>
+          <option value="IT">Italy</option>
+          <option value="OTHER">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group form-group-checkbox">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a> <span class="required">*</span></label>
+      </div>
+      <span class="form-error" id="error-terms" role="alert"></span>
+
+      <div class="form-group form-group-checkbox">
+        <input type="checkbox" id="newsletter" name="newsletter" checked>
+        <label for="newsletter">Send me product updates and tips</label>
+      </div>
+
+      <button type="submit" class="signup-submit" id="signup-submit">Create account</button>
+    </form>
+
+    <p class="signup-login">
+      Already have an account? <a href="#">Log in</a>
+    </p>
+  </section>
+</main>
+
+<script>
+(function() {
+  var hamburger = document.querySelector(".hamburger");
+  var navLinks = document.querySelector(".nav-links");
+  var navbar = document.querySelector(".navbar");
+  if (hamburger && navLinks && navbar) {
+    hamburger.addEventListener("click", function() {
+      navLinks.classList.toggle("active");
+      navbar.classList.toggle("active");
+    });
+    navbar.addEventListener("mouseleave", function() {
+      if (navLinks.classList.contains("active")) {
+        navLinks.classList.remove("active");
+        navbar.classList.remove("active");
+      }
+    });
+  }
+})();
+
+(function() {
+  var form = document.getElementById("signup-form");
+  var successEl = document.getElementById("signup-success");
+
+  function showError(id, message) {
+    var el = document.getElementById(id);
+    if (el) {
+      el.textContent = message;
+      el.style.display = message ? "block" : "none";
+    }
+  }
+
+  function setInvalid(input, invalid) {
+    if (!input) return;
+    input.setAttribute("aria-invalid", invalid ? "true" : "false");
+    input.classList.toggle("input-error", !!invalid);
+  }
+
+  function validateEmail(value) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value || "");
+  }
+
+  function validatePassword(value) {
+    if (!value || value.length < 8) return false;
+    return /\d/.test(value) && /[a-zA-Z]/.test(value);
+  }
+
+  function validate() {
+    var first = document.getElementById("first-name");
+    var last = document.getElementById("last-name");
+    var email = document.getElementById("email");
+    var password = document.getElementById("password");
+    var confirm = document.getElementById("confirm-password");
+    var terms = document.getElementById("terms");
+    var valid = true;
+
+    if (!first.value.trim()) {
+      showError("error-first-name", "First name is required.");
+      setInvalid(first, true);
+      valid = false;
+    } else {
+      showError("error-first-name", "");
+      setInvalid(first, false);
+    }
+
+    if (!last.value.trim()) {
+      showError("error-last-name", "Last name is required.");
+      setInvalid(last, true);
+      valid = false;
+    } else {
+      showError("error-last-name", "");
+      setInvalid(last, false);
+    }
+
+    if (!email.value.trim()) {
+      showError("error-email", "Email is required.");
+      setInvalid(email, true);
+      valid = false;
+    } else if (!validateEmail(email.value)) {
+      showError("error-email", "Please enter a valid email address.");
+      setInvalid(email, true);
+      valid = false;
+    } else {
+      showError("error-email", "");
+      setInvalid(email, false);
+    }
+
+    if (!password.value) {
+      showError("error-password", "Password is required.");
+      setInvalid(password, true);
+      valid = false;
+    } else if (!validatePassword(password.value)) {
+      showError("error-password", "Use at least 8 characters with a number and a letter.");
+      setInvalid(password, true);
+      valid = false;
+    } else {
+      showError("error-password", "");
+      setInvalid(password, false);
+    }
+
+    if (password.value !== confirm.value) {
+      showError("error-confirm-password", "Passwords do not match.");
+      setInvalid(confirm, true);
+      valid = false;
+    } else {
+      showError("error-confirm-password", "");
+      setInvalid(confirm, false);
+    }
+
+    if (!terms.checked) {
+      showError("error-terms", "You must agree to the Terms and Privacy Policy.");
+      valid = false;
+    } else {
+      showError("error-terms", "");
+    }
+
+    return valid;
+  }
+
+  if (form) {
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      var submitBtn = document.getElementById("signup-submit");
+      if (!validate()) return;
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Creating account…";
+      setTimeout(function() {
+        form.setAttribute("hidden", "hidden");
+        if (successEl) successEl.removeAttribute("hidden");
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Create account";
+      }, 800);
+    });
+
+    form.querySelectorAll("input, select").forEach(function(input) {
+      input.addEventListener("input", function() {
+        var errId = "error-" + (input.id || input.name);
+        var errEl = document.getElementById(errId);
+        if (errEl) {
+          errEl.textContent = "";
+          errEl.style.display = "none";
+        }
+        setInvalid(input, false);
+      });
+      input.addEventListener("change", function() {
+        if (input.id === "terms") {
+          showError("error-terms", input.checked ? "" : "You must agree to the Terms and Privacy Policy.");
+        }
+      });
+    });
+  }
+})();
+</script>
+</body>
+</html>
