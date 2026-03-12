@@ -113,9 +113,18 @@ gsap.to(".box2", {
 const hamburger = document.querySelector(".hamburger")
 const navLinks = document.querySelector(".nav-links")
 const navbar = document.querySelector(".navbar")
+
 hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("active")
     navbar.classList.toggle("active")
+})
+
+// Close dropdown when user stops hovering over the menu (mouse leaves navbar)
+navbar.addEventListener("mouseleave", () => {
+    if (navLinks.classList.contains("active")) {
+        navLinks.classList.remove("active")
+        navbar.classList.remove("active")
+    }
 })
 
 
