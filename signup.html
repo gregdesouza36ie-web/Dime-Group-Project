@@ -57,7 +57,39 @@
 
       <div class="form-group">
         <label for="phone">Phone number</label>
-        <input type="tel" id="phone" name="phone" placeholder="+353 1 234 5678" autocomplete="tel">
+        <div class="phone-input-row">
+          <select id="phone-country-code" name="phone-country-code" aria-label="Country code" title="Country code">
+            <option value="+353" selected>Ireland +353</option>
+            <option value="+44">United Kingdom +44</option>
+            <option value="+49">Germany +49</option>
+            <option value="+33">France +33</option>
+            <option value="+34">Spain +34</option>
+            <option value="+39">Italy +39</option>
+            <option value="+31">Netherlands +31</option>
+            <option value="+32">Belgium +32</option>
+            <option value="+43">Austria +43</option>
+            <option value="+48">Poland +48</option>
+            <option value="+46">Sweden +46</option>
+            <option value="+351">Portugal +351</option>
+            <option value="+30">Greece +30</option>
+            <option value="+420">Czech Republic +420</option>
+            <option value="+40">Romania +40</option>
+            <option value="+36">Hungary +36</option>
+            <option value="+45">Denmark +45</option>
+            <option value="+358">Finland +358</option>
+            <option value="+421">Slovakia +421</option>
+            <option value="+359">Bulgaria +359</option>
+            <option value="+385">Croatia +385</option>
+            <option value="+370">Lithuania +370</option>
+            <option value="+386">Slovenia +386</option>
+            <option value="+371">Latvia +371</option>
+            <option value="+372">Estonia +372</option>
+            <option value="+357">Cyprus +357</option>
+            <option value="+352">Luxembourg +352</option>
+            <option value="+356">Malta +356</option>
+          </select>
+          <input type="tel" id="phone" name="phone" placeholder="1 234 5678" autocomplete="tel">
+        </div>
         <span class="form-error" id="error-phone" role="alert"></span>
       </div>
 
