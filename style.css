@@ -377,6 +377,13 @@ section {
   margin: 0 auto;
 }
 
+#footer-layout {
+  text-align: center;
+  margin-top: 70px;
+  padding: 20px 0 0;
+  font-size: 20px;
+}
+
 .pricing-card {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(10px);
