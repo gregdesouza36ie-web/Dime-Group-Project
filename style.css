@@ -833,7 +833,7 @@ section {
 .documents {
   text-align: center;
   padding-top: 140px;
-  height: 800px;
+  min-height: 800px;
 }
 .documents-title {
   font-size: 50px;
@@ -842,13 +842,14 @@ section {
 }
 .documents-videos {
   display: grid;
-  grid-template-columns: repeat(3, 250px);
+  grid-template-columns: repeat(4, 200px);
   justify-content: center;
   align-items: flex-start;
-  gap: 30px 70px;
+  gap: 40px 70px;
 }
 
 .documents-videos video {
-  width: 200px;
+  width: 250px;
+  height: auto;
   border-radius: 18px;
 }
