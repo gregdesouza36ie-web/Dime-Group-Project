@@ -304,14 +304,15 @@ section {
 
 .horizontal .card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   text-align: center;
   width: 28vw;
   padding: 50px 30px;
-  border: 2px solid rgba(0, 0, 0, 0.397);
+ /* border: 2px solid rgba(0, 0, 0, 0.397); */
 }
+/* horizontal cards section */
 
 .card h2 {
   color: rgb(0, 0, 0);
@@ -325,6 +326,7 @@ section {
   font-weight: bold;
   line-height: 1.4;
 }
+
 
 @media (max-width: 768px) {
   #horizontal-scroll {
