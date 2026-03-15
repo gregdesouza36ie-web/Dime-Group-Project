@@ -281,16 +281,13 @@ section {
 
 #horizontal-scroll {
   padding-bottom: 300px;
-
 }
 
 .horizontal-scroll-wrapper {
   display: flex;
   overflow: hidden;
   height: 100vh;
-
 }
-
 
 .horizontal {
   display: flex;
@@ -309,14 +306,14 @@ section {
   font-weight: 700;
 
   color: rgba(255, 235, 235, 0.13);
-
 }
 .horizontal > div {
   padding: 0 4.1vw;
 }
 
 .horizontal .card {
-  font-family: "Inter", sans-serif;  color: whitesmoke;
+  font-family: "Inter", sans-serif;
+  color: whitesmoke;
   display: flex;
   flex-direction: column;
   /*
@@ -330,24 +327,26 @@ section {
   padding: 70px 30px;
   border-radius: 20px;
   background-color: rgb(27, 38, 72);
-   border: 2px solid rgb(196, 196, 196);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 2px solid rgb(196, 196, 196);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 .card:hover {
   transform: translateY(-10px);
 
   box-shadow:
-  0 20px 60px rgba(0,0,0,0.6),
-  0 0 30px rgba(0,255,200,0.15);
+    0 20px 60px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(0, 255, 200, 0.15);
 }
-.horizontal > div:nth-child(1) .card{
+.horizontal > div:nth-child(1) .card {
   background: rgb(143, 9, 200);
 }
-.horizontal > div:nth-child(2) .card{
+.horizontal > div:nth-child(2) .card {
   background: rgb(5, 112, 124);
 }
-.horizontal > div:nth-child(3) .card{
+.horizontal > div:nth-child(3) .card {
   background: rgb(235, 182, 36);
 }
 
@@ -363,7 +362,6 @@ section {
   font-weight: bold;
   line-height: 1.4;
 }
-
 
 @media (max-width: 768px) {
   #horizontal-scroll {
@@ -900,6 +898,18 @@ section {
   margin-top: 5px;
   margin-bottom: 10px;
   font-size: 18px;
+}
+
+.documents-info {
+  width: 700px;
+  margin: 60px auto 0;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px 30px;
+  border: 1px solid #e2c2f2;
+  font-size: 20px;
+  line-height: 1.8;
+  color: #333;
 }
 
 #footer-layout {
