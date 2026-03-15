@@ -172,7 +172,7 @@ h1 {
   height: 75vh;
 }
 
-.video {
+.video-1 {
   display: flex;
   justify-content: flex-start;
   margin-left: 5%;
@@ -827,4 +827,28 @@ section {
   .signup-form-row {
     grid-template-columns: 1fr;
   }
+}
+
+/* ========== Documents subpage========== */
+.documents {
+  text-align: center;
+  padding-top: 140px;
+  height: 800px;
+}
+.documents-title {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.documents-videos {
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px 70px;
+}
+
+.documents-videos video {
+  width: 200px;
+  border-radius: 18px;
 }
