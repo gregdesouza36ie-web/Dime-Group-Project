@@ -306,15 +306,13 @@ section {
 
 /* horizontal cards section */
 .big-number {
-  position: relative;
-
-  right: 10px;
-  top: 0px;
-
+  position: absolute;
+  display: flex;
+  align-self: flex-end;
   font-size: 120px;
   font-weight: 700;
 
-  color: rgb(247, 5, 5);
+  color: rgba(255, 235, 235, 0.13);
 
 }
 .horizontal > div {
@@ -322,6 +320,7 @@ section {
 }
 
 .horizontal .card {
+  font-family: "Inter", sans-serif;  color: whitesmoke;
   display: flex;
   flex-direction: column;
   /*
@@ -329,12 +328,32 @@ section {
   align-items: center;
   text-align: center;
   */
+
   width: 28vw;
-  padding: 50px 30px;
-  border: 2px solid rgba(0, 0, 0, 0.397);
+  gap: 15px;
+  padding: 70px 30px;
+  border-radius: 20px;
+  background-color: rgb(27, 38, 72);
+   border: 2px solid rgb(196, 196, 196);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
+.card:hover {
+  transform: translateY(-10px);
 
+  box-shadow:
+  0 20px 60px rgba(0,0,0,0.6),
+  0 0 30px rgba(0,255,200,0.15);
+}
+.horizontal > div:nth-child(1) .card{
+  background: rgb(143, 9, 200);
+}
+.horizontal > div:nth-child(2) .card{
+  background: rgb(5, 112, 124);
+}
+.horizontal > div:nth-child(3) .card{
+  background: rgb(235, 182, 36);
+}
 
 .card h2 {
   color: rgb(0, 0, 0);
@@ -351,7 +370,7 @@ section {
 
 .card h3{
   font-size: 28px;
-  font-weight: 600;
+
 }
 
 .card p{
