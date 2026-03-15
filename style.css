@@ -285,13 +285,16 @@ section {
 
 #horizontal-scroll {
   padding-bottom: 300px;
+
 }
 
 .horizontal-scroll-wrapper {
   display: flex;
   overflow: hidden;
   height: 100vh;
+
 }
+
 
 .horizontal {
   display: flex;
@@ -301,21 +304,37 @@ section {
   color: rgb(0, 0, 0);
 }
 
+/* horizontal cards section */
+.big-number {
+  position: relative;
+
+  right: 10px;
+  top: 0px;
+
+  font-size: 120px;
+  font-weight: 700;
+
+  color: rgb(247, 5, 5);
+
+}
 .horizontal > div {
   padding: 0 4.1vw;
 }
 
 .horizontal .card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  /*
   justify-content: center;
   align-items: center;
   text-align: center;
+  */
   width: 28vw;
   padding: 50px 30px;
- /* border: 2px solid rgba(0, 0, 0, 0.397); */
+  border: 2px solid rgba(0, 0, 0, 0.397);
 }
-/* horizontal cards section */
+
+
 
 .card h2 {
   color: rgb(0, 0, 0);
@@ -330,6 +349,16 @@ section {
   line-height: 1.4;
 }
 
+.card h3{
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.card p{
+  font-size: 15px;
+  opacity: 0.7;
+  line-height: 1.6;
+}
 
 @media (max-width: 768px) {
   #horizontal-scroll {
