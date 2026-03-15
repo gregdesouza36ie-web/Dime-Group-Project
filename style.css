@@ -100,12 +100,11 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 @media (max-width: 768px) {
-  .nav-top{
-    width:100%;
+  .nav-top {
+    width: 100%;
   }
   .navbar {
     flex-direction: column;
@@ -176,14 +175,11 @@ h1 {
   outline: none;
   border: none;
   border-radius: 115px;
-
-
 }
 
 .video-1 {
   display: flex;
   justify-content: flex-start;
-
 }
 
 @media screen and (max-width: 768px) {
@@ -313,7 +309,7 @@ section {
   text-align: center;
   width: 28vw;
   padding: 50px 30px;
- /* border: 2px solid rgba(0, 0, 0, 0.397); */
+  /* border: 2px solid rgba(0, 0, 0, 0.397); */
 }
 /* horizontal cards section */
 
@@ -329,7 +325,6 @@ section {
   font-weight: bold;
   line-height: 1.4;
 }
-
 
 @media (max-width: 768px) {
   #horizontal-scroll {
@@ -835,8 +830,8 @@ section {
 /* ========== Documents subpage========== */
 .documents {
   text-align: center;
-  padding-top: 140px;
-  min-height: 800px;
+  padding: 140px 20px 240px;
+  min-height: 1200px;
 }
 .documents-title {
   font-size: 50px;
@@ -845,14 +840,30 @@ section {
 }
 .documents-videos {
   display: grid;
-  grid-template-columns: repeat(4, 200px);
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px 70px;
+  grid-template-columns: repeat(4, 250px);
+  gap: 30px 40px;
+  width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .documents-videos video {
   width: 250px;
-  height: auto;
+  display: block;
   border-radius: 18px;
+}
+
+.docs-cards {
+  text-align: center;
+}
+
+.docs-cards p {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+#footer-layout {
+  margin-top: 200px;
+  padding: 30px 0;
 }
