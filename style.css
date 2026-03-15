@@ -168,14 +168,19 @@ h1 {
 }
 
 .interface-video {
-  width: 100%;
+  width: 30%;
   height: 75vh;
+  outline: none;
+  border: none;
+  border-radius: 115px;
+
+
 }
 
 .video {
   display: flex;
   justify-content: flex-start;
-  margin-left: 5%;
+
 }
 
 @media screen and (max-width: 768px) {
@@ -375,13 +380,6 @@ section {
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
-}
-
-#footer-layout {
-  text-align: center;
-  margin-top: 70px;
-  padding: 20px 0 0;
-  font-size: 20px;
 }
 
 .pricing-card {
