@@ -287,6 +287,8 @@ section {
   display: flex;
   overflow: hidden;
   height: 100vh;
+  margin-top: 50px;
+
 }
 
 .horizontal {
@@ -322,7 +324,7 @@ section {
   text-align: center;
   */
 
-  width: 28vw;
+  width: 30vw;
   gap: 15px;
   padding: 70px 30px;
   border-radius: 20px;
@@ -386,6 +388,10 @@ section {
   }
   .horizontal-scroll-wrapper {
     height: 60vh; /* Reduce height on mobile to bring scroll trigger closer */
+  }
+
+  .horizontal .card {
+    width: 58vw;
   }
 
 }

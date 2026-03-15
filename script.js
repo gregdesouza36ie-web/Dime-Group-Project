@@ -152,14 +152,15 @@ document.addEventListener("DOMContentLoaded", (event) =>
   gsap.registerPlugin(ScrollTrigger); 
    
   let horizontalSection = document.querySelector(".horizontal");
-
+  let getScrollAmount = () =>
+    horizontalSection.scrollWidth - window.innerWidth;
   gsap.to(".horizontal", {
-    x: () => -(horizontalSection.scrollWidth - window.innerWidth),
+    x: () => -(getScrollAmount()),
     scrollTrigger: {
       //markers: true,
       trigger: ".horizontal",
       start: "center center",
-      end: () => "+=" + (horizontalSection.scrollWidth),
+      end: () => "+=" + (getScrollAmount()),
       scrub: 1,
       pin: "#horizontal-scroll",
       invalidateOnRefresh: true,
