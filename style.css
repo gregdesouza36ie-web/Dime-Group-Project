@@ -177,7 +177,7 @@ h1 {
 
 }
 
-.video {
+.video-1 {
   display: flex;
   justify-content: flex-start;
 
@@ -825,4 +825,29 @@ section {
   .signup-form-row {
     grid-template-columns: 1fr;
   }
+}
+
+/* ========== Documents subpage========== */
+.documents {
+  text-align: center;
+  padding-top: 140px;
+  min-height: 800px;
+}
+.documents-title {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.documents-videos {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px 70px;
+}
+
+.documents-videos video {
+  width: 250px;
+  height: auto;
+  border-radius: 18px;
 }
