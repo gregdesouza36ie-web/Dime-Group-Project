@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Contact Us — ÉireID</title>
+</head>
+<body class="contact-page">
+<nav class="navbar">
+  <div class="nav-top">
+    <a href="index.html">
+      <img src="images/logo_01.png" alt="EireId Logo" style="width: 50px;height: 50px; background: transparent;">
+    </a>
+    <a href="index.html" class="logo">ÉireID</a>
+    <div class="hamburger" aria-label="Toggle menu">
+      <strong>☰</strong>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="documents.html">Documents</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="index.html#pricing">Pricing</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="signup.html" class="cta mobile-cta" style="color:white;">Sign Up</a></li>
+  </ul>
+  <a href="signup.html" class="cta">Sign Up</a>
+</nav>
+
+<main class="contact-main">
+  <header class="contact-header">
+    <h1 class="contact-title">Contact Us</h1>
+    <p class="contact-lead">We’re here to help. Send a message or use the details below to reach us.</p>
+  </header>
+
+  <div id="contact-success" class="contact-success" hidden>
+    <span class="contact-success-icon" aria-hidden="true">✓</span>
+    <h2>Message sent</h2>
+    <p>We’ll get back to you within 1–2 business days.</p>
+  </div>
+
+  <div class="contact-wrapper">
+    <section class="contact-form-section" aria-labelledby="form-heading">
+      <h2 id="form-heading" class="contact-form-title">Send a message</h2>
+      <form id="contact-form" class="contact-form" action="#" method="post" novalidate>
+        <div class="contact-form-row">
+          <div class="form-group">
+            <label for="contact-name">Full name <span class="required">*</span></label>
+            <input type="text" id="contact-name" name="name" placeholder="Your name" required autocomplete="name">
+            <span class="form-error" id="error-contact-name" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email <span class="required">*</span></label>
+            <input type="email" id="contact-email" name="email" placeholder="you@example.com" required autocomplete="email">
+            <span class="form-error" id="error-contact-email" role="alert"></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="contact-phone">Phone number</label>
+          <input type="tel" id="contact-phone" name="phone" placeholder="+353 1 234 5678" autocomplete="tel">
+        </div>
+        <div class="form-group">
+          <label for="contact-subject">Subject <span class="required">*</span></label>
+          <select id="contact-subject" name="subject" required>
+            <option value="">Select a topic</option>
+            <option value="general">General enquiry</option>
+            <option value="support">Technical support</option>
+            <option value="billing">Billing & plans</option>
+            <option value="security">Security & privacy</option>
+            <option value="partnership">Partnership</option>
+            <option value="other">Other</option>
+          </select>
+          <span class="form-error" id="error-contact-subject" role="alert"></span>
+        </div>
+        <div class="form-group">
+          <label for="contact-message">Message <span class="required">*</span></label>
+          <textarea id="contact-message" name="message" rows="5" placeholder="How can we help?" required minlength="10"></textarea>
+          <span class="form-error" id="error-contact-message" role="alert"></span>
+        </div>
+        <button type="submit" class="contact-submit" id="contact-submit">Send message</button>
+      </form>
+    </section>
+
+    <aside class="contact-info" aria-labelledby="info-heading">
+      <h2 id="info-heading" class="contact-info-title">Get in touch</h2>
+      <ul class="contact-info-list">
+        <li>
+          <span class="contact-info-label">Email</span>
+          <a href="mailto:support@eireid.ie">support@eireid.ie</a>
+        </li>
+        <li>
+          <span class="contact-info-label">Phone</span>
+          <a href="tel:+35312345678">+353 1 234 5678</a>
+        </li>
+        <li>
+          <span class="contact-info-label">Address</span>
+          <address>
+            ÉireID Ltd<br>
+            123 Example Street<br>
+            Dublin 2, D02 XY45<br>
+            Ireland
+          </address>
+        </li>
+        <li>
+          <span class="contact-info-label">Business hours</span>
+          <p>Mon–Fri: 9:00 – 17:30 (IST)<br>Sat–Sun: Closed</p>
+        </li>
+      </ul>
+    </aside>
+  </div>
+</main>
+
+<script>
+(function() {
+  var hamburger = document.querySelector(".hamburger");
+  var navLinks = document.querySelector(".nav-links");
+  var navbar = document.querySelector(".navbar");
+  if (hamburger && navLinks && navbar) {
+    hamburger.addEventListener("click", function() {
+      navLinks.classList.toggle("active");
+      navbar.classList.toggle("active");
+    });
+    navbar.addEventListener("mouseleave", function() {
+      if (navLinks.classList.contains("active")) {
+        navLinks.classList.remove("active");
+        navbar.classList.remove("active");
+      }
+    });
+  }
+})();
+
+(function() {
+  var form = document.getElementById("contact-form");
+  var successEl = document.getElementById("contact-success");
+
+  function showError(id, message) {
+    var el = document.getElementById(id);
+    if (el) {
+      el.textContent = message;
+      el.style.display = message ? "block" : "none";
+    }
+  }
+
+  function setInvalid(el, invalid) {
+    if (!el) return;
+    el.setAttribute("aria-invalid", invalid ? "true" : "false");
+    el.classList.toggle("input-error", !!invalid);
+  }
+
+  function validateEmail(value) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value || "");
+  }
+
+  if (form) {
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      var name = document.getElementById("contact-name");
+      var email = document.getElementById("contact-email");
+      var subject = document.getElementById("contact-subject");
+      var message = document.getElementById("contact-message");
+      var valid = true;
+
+      if (!name.value.trim()) {
+        showError("error-contact-name", "Please enter your name.");
+        setInvalid(name, true);
+        valid = false;
+      } else {
+        showError("error-contact-name", "");
+        setInvalid(name, false);
+      }
+
+      if (!email.value.trim()) {
+        showError("error-contact-email", "Please enter your email.");
+        setInvalid(email, true);
+        valid = false;
+      } else if (!validateEmail(email.value)) {
+        showError("error-contact-email", "Please enter a valid email address.");
+        setInvalid(email, true);
+        valid = false;
+      } else {
+        showError("error-contact-email", "");
+        setInvalid(email, false);
+      }
+
+      if (!subject.value) {
+        showError("error-contact-subject", "Please select a subject.");
+        setInvalid(subject, true);
+        valid = false;
+      } else {
+        showError("error-contact-subject", "");
+        setInvalid(subject, false);
+      }
+
+      if (!message.value.trim()) {
+        showError("error-contact-message", "Please enter your message.");
+        setInvalid(message, true);
+        valid = false;
+      } else if (message.value.trim().length < 10) {
+        showError("error-contact-message", "Message must be at least 10 characters.");
+        setInvalid(message, true);
+        valid = false;
+      } else {
+        showError("error-contact-message", "");
+        setInvalid(message, false);
+      }
+
+      if (!valid) return;
+
+      var submitBtn = document.getElementById("contact-submit");
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending…";
+      setTimeout(function() {
+        form.setAttribute("hidden", "hidden");
+        if (successEl) successEl.removeAttribute("hidden");
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Send message";
+      }, 600);
+    });
+
+    form.querySelectorAll("input, select, textarea").forEach(function(el) {
+      el.addEventListener("input", function() {
+        var errId = "error-contact-" + (el.id ? el.id.replace("contact-", "") : el.name);
+        var errEl = document.getElementById(errId);
+        if (errEl) {
+          errEl.textContent = "";
+          errEl.style.display = "none";
+        }
+        setInvalid(el, false);
+      });
+    });
+  }
+})();
+</script>
+</body>
+</html>
