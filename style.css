@@ -1388,15 +1388,17 @@ html {
 .member p {
   margin: 2;
   color: #303030;
-  line-height: 1.6;
+  line-height: 1.7;
   font-size: 22px;
 }
 
 .member li {
   font-size: 22px;
+  line-height: 1.7;
 }
 
-.email-link {
+.email-link,
+.instagram {
   font-size: 22px;
   color: #72439f;
 }
