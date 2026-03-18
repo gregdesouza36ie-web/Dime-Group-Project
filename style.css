@@ -1292,6 +1292,10 @@ body {
 }
 
 /* ========== App ========== */
+.documents,
+.services {
+  background: #fafafa;
+}
 .documents {
   text-align: center;
   min-height: 1500px;
@@ -1316,7 +1320,7 @@ body {
   background: #ffffff;
   border-radius: 12px;
   padding: 25px 30px;
-  border: 1px solid #e2c2f2;
+  border: 1px solid #e2e8f0;
   font-size: 20px;
   line-height: 1.7;
   color: #333;
@@ -1359,7 +1363,7 @@ body {
   border-radius: 12px;
   padding: 25px 30px;
   font-size: 20px;
-  border: 2px solid #e2c2f2;
+  border: 1px solid #e2e8f0;
   line-height: 1.7;
 }
 
@@ -1382,26 +1386,27 @@ body {
 
 .service-features {
   width: 640px;
-  background: #ead6f8;
+  background: #ffffff;
   border-radius: 12px;
   padding: 20px 30px;
   font-size: 18px;
-  border: 1px solid #ece0f2;
+  border: 1px solid #e2e8f0;
   line-height: 1.7;
   text-align: left;
-  color: #9347ba;
+  color: white;
 }
 
 .service-features h3 {
   font-size: 40px;
-  color: #622792;
+  color: #1f2937;
   text-align: center;
   margin-bottom: 20px;
+  letter-spacing: 1.2px;
 }
 
 .feature {
-  background: #edddf9;
-  border: 2px solid #b78bd4;
+  background: #7b4a54;
+  border: 2px solid rgba(255, 255, 255, 0.15);
   border-radius: 12px;
   padding: 15px 20px;
   margin-bottom: 8px;
@@ -1410,12 +1415,14 @@ body {
 
 .feature h4 {
   font-size: 20px;
-  color: #622792;
+  color: #ffffff;
+  border-left: 3px solid #ffffff;
+  padding-left: 15px;
 }
 
 .service-features p {
   margin: 0;
   font-size: 16px;
-  line-height: 1.4;
-  color: #622792;
+  line-height: 1.8;
+  color: #f1f5f9;
 }
