@@ -882,134 +882,6 @@ section {
   }
 }
 
-/* ========== Documents subpage========== */
-.documents {
-  text-align: center;
-  padding: 140px 20px 260px;
-  min-height: 1200px;
-}
-.documents-title {
-  font-size: 50px;
-  font-weight: 700;
-  margin-bottom: 50px;
-}
-
-.documents-info {
-  width: 600px;
-  margin: 60px auto 0;
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 25px 30px;
-  border: 1px solid #e2c2f2;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #333;
-}
-.documents-videos {
-  display: grid;
-  grid-template-columns: repeat(4, 250px);
-  gap: 30px 40px;
-  width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.documents-videos video {
-  width: 250px;
-  display: block;
-  border-radius: 18px;
-}
-
-.docs-cards {
-  text-align: center;
-}
-
-.docs-cards p {
-  margin-top: 5px;
-  margin-bottom: 10px;
-  font-size: 20px;
-}
-
-#footer-layout {
-  margin-top: 50px;
-  padding: 30px 0;
-}
-
-/*========== Services section ========== */
-
-.services {
-  text-align: center;
-  padding: 140px 20px 260px;
-}
-
-.services-title {
-  font-size: 80px;
-  font-weight: 700;
-  margin-bottom: 50px;
-}
-
-.services-info {
-  width: 450px;
-  margin: 50px auto 0;
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 25px 30px;
-  font-size: 20px;
-  border: 1px solid #e2c2f2;
-  line-height: 1.7;
-}
-
-.service-video video {
-  width: 500px;
-  border-radius: 18px;
-  display: block;
-}
-
-.service-features {
-  width: 600px;
-  margin: 0 auto;
-  background: #ddc7ed;
-  border-radius: 12px;
-  padding: 20px 30px;
-  font-size: 18px;
-  border: 1px solid #ece0f2;
-  line-height: 1.7;
-  text-align: left;
-  color: #9347ba;
-}
-
-.service-video,
-.service-features {
-  display: inline-block;
-  vertical-align: middle;
-  margin-top: 90px;
-}
-
-.feature {
-  background: #eee0f8;
-  border: 1px solid #b78bd4;
-  border-radius: 12px;
-  padding: 15px 20px;
-  margin-bottom: 10px;
-}
-
-.feature h4 {
-  font-size: 20px;
-  color: #622792;
-}
-
-.service-features h3 {
-  font-size: 20px;
-  color: #622792;
-  text-align: center;
-}
-.service-features p {
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.2;
-  color: #622792;
-}
-
 /* ========== Contact page (industrial standard) ========== */
 .contact-page {
   overflow-x: hidden;
@@ -1418,4 +1290,133 @@ body {
   min-height: auto;
   overflow: visible;
   position: static;
+}
+
+/* ========== App ========== */
+.documents {
+  text-align: center;
+  min-height: 1500px;
+  padding: 140px 20px 100px;
+}
+
+.services {
+  text-align: center;
+  padding: 80px 20px 140px;
+  min-height: 1000px;
+}
+
+.documents-title {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.documents-info {
+  width: 680px;
+  margin: 60px auto 0;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px 30px;
+  border: 1px solid #e2c2f2;
+  font-size: 20px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.documents-videos {
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  gap: 30px 40px;
+  width: 1100px;
+  margin: 60px auto 0;
+}
+
+.documents-videos video {
+  width: 250px;
+  display: block;
+  border-radius: 18px;
+}
+
+.docs-cards {
+  text-align: center;
+}
+
+.docs-cards p {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.services-title {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.services-info {
+  width: 450px;
+  margin: 50px auto 0;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px 30px;
+  font-size: 20px;
+  border: 2px solid #e2c2f2;
+  line-height: 1.7;
+}
+
+.service-video video {
+  width: 550px;
+  border-radius: 18px;
+  display: block;
+}
+
+.service-video,
+.service-features {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 90px;
+}
+
+.service-video {
+  margin-right: 70px;
+}
+
+.service-features {
+  width: 640px;
+  background: #ead6f8;
+  border-radius: 12px;
+  padding: 20px 30px;
+  font-size: 18px;
+  border: 1px solid #ece0f2;
+  line-height: 1.7;
+  text-align: left;
+  color: #9347ba;
+}
+
+.service-features h3 {
+  font-size: 40px;
+  color: #622792;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.feature {
+  background: #edddf9;
+  border: 2px solid #b78bd4;
+  border-radius: 12px;
+  padding: 15px 20px;
+  margin-bottom: 8px;
+  width: 600px;
+}
+
+.feature h4 {
+  font-size: 20px;
+  color: #622792;
+}
+
+.service-features p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #622792;
 }
