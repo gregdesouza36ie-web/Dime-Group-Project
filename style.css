@@ -220,6 +220,59 @@ section {
   min-height: 100vh;
 }
 
+.sec-half {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 30vw;
+  height: 100vh;
+ justify-content: space-between;
+  gap: 60% ;
+  background-color: #9c233b;
+
+}
+
+.market-sec {
+  display: flex;
+  width: 100vw;
+
+}
+
+.market-header{
+margin-left: 20px;
+
+}
+.market-header h3 {
+  color: white;
+  font-size: 6rem;
+  font-weight: 600;
+}
+
+@media (max-width: 1100px) {
+  .sec-half {
+    width: 100vw;
+    height: 24vh;
+    padding: 10px 0px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 45vw;
+    background-color: #9c233b;
+  }
+  .market-header {
+
+    align-self: flex-end;
+  }
+
+  .market-header h3 {
+    font-size: clamp(3rem, 8vw, 5rem);
+  }
+.p-chart {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;"
+}
+
+}
 .curtain {
   width: 100vw;
   height: 100vh;
