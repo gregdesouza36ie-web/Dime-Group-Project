@@ -170,7 +170,8 @@ h1 {
 }
 
 .interface-video {
-  width: 30%;
+  width: 100%;
+  min-width: 400px;
   height: 75vh;
   outline: none;
   border: none;
@@ -179,7 +180,8 @@ h1 {
 
 .video-1 {
   display: flex;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -220,59 +222,6 @@ section {
   min-height: 100vh;
 }
 
-.sec-half {
-  display: flex;
-  flex-direction: column-reverse;
-  width: 30vw;
-  height: 100vh;
- justify-content: space-between;
-  gap: 60% ;
-  background-color: #9c233b;
-
-}
-
-.market-sec {
-  display: flex;
-  width: 100vw;
-
-}
-
-.market-header{
-margin-left: 20px;
-
-}
-.market-header h3 {
-  color: white;
-  font-size: 6rem;
-  font-weight: 600;
-}
-
-@media (max-width: 1100px) {
-  .sec-half {
-    width: 100vw;
-    height: 24vh;
-    padding: 10px 0px;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 45vw;
-    background-color: #9c233b;
-  }
-  .market-header {
-
-    align-self: flex-end;
-  }
-
-  .market-header h3 {
-    font-size: clamp(3rem, 8vw, 5rem);
-  }
-.p-chart {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: center;"
-}
-
-}
 .curtain {
   width: 100vw;
   height: 100vh;
@@ -445,6 +394,28 @@ margin-left: 20px;
     width: 58vw;
   }
 }
+
+
+.info-sec {
+  display: flex;
+  flex-direction: row;
+
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+
+  .info-sec {
+    display: flex;
+    flex-direction: column;
+  
+}
+}
+
 
 /* ========== Pricing section ========== */
 .pricing-section {
@@ -1479,3 +1450,81 @@ body {
   line-height: 1.8;
   color: #f1f5f9;
 }
+
+
+/* Market Section */
+
+.sec-half {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 30vw;
+  height: 100vh;
+  justify-content: space-between;
+  gap: 60% ;
+  background-color: #9c233b;
+  padding-right: 15px;
+
+}
+
+.market-sec {
+  display: flex;
+  width: 100vw;
+
+}
+
+.market-header{
+margin-left: 20px;
+
+}
+.market-header h3 {
+  color: white;
+  font-size: 6rem;
+  font-weight: 600;
+}
+
+
+@media (max-width: 1100px) {
+  .sec-half {
+    width: 100vw;
+    height: 24vh;
+    margin-top: 50px;
+    padding: 10px 0px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 45vw;
+    background-color: #9c233b;
+  }
+  .market-header {
+
+    align-self: flex-end;
+  }
+
+  .market-header h3 {
+    font-size: clamp(3rem, 8vw, 5rem);
+  }
+
+}
+.p-chart {
+  margin-top: -200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: center;"
+}
+
+.petit-formal-script-regular {
+  font-family: "Petit Formal Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.montserrat-head {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: oblique;
+  
+}
+
