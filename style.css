@@ -1503,8 +1503,26 @@ margin-left: 20px;
   font-weight: 600;
 }
 
+.p-chart {
+  margin-top: -5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: center;"
+}
+
+
 
 @media (max-width: 1100px) {
+
+  .market-sec {
+    display: flex;
+    flex-direction: column;
+  }
+  .p-chart{
+    margin-top: 0;
+  }
   .sec-half {
     width: 100vw;
     height: 24vh;
@@ -1512,7 +1530,7 @@ margin-left: 20px;
     padding: 10px 0px;
     flex-direction: row;
     justify-content: space-between;
-    gap: 45vw;
+
     background-color: #9c233b;
   }
   .market-header {
@@ -1525,17 +1543,120 @@ margin-left: 20px;
   }
 
 }
-.p-chart {
-  margin-top: -200px;
+
+
+
+
+/* section */
+.segments-section {
+  max-width: 100vw;
+  margin: auto;
+  text-align: center;
+  background-color: #9c233b;
+  color: white;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 60px;
+}
+
+/* grid */
+.segments-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* items */
+.segment-item {
+  padding: 50px 40px;
+}
+
+/* icon */
+.segment-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: #f1f5f9;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  width: 100%;
-  justify-content: center;"
+  justify-content: center;
+}
+
+/* label */
+.segment-label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: #a9aeb6;
+  margin-bottom: 5px;
+}
+
+/* text */
+.segment-item h3 {
+  margin-bottom: 10px;
+}
+
+.segment-item p {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+}
+
+/* === LINES (REAL ELEMENTS) === */
+.line {
+  position: absolute;
+  background: #e5e7eb;
+}
+
+
+.line-vertical-top {
+  width: 1px;
+  height: 35%;
+  left: 50%;
+  top: 0;
+}
+
+.line-vertical-bottom {
+  width: 1px;
+  height: 35%;
+  left: 50%;
+  bottom: 0;
+}
+
+
+.line-horizontal-left {
+  height: 1px;
+  width: 40%;
+  top: 50%;
+  left: 5%;
+}
+
+.line-horizontal-right {
+  height: 1px;
+  width: 40%;
+  top: 50%;
+  right: 5%;
+}
+
+
+@media (max-width: 768px) {
+  .segments-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .segment-item {
+    border-bottom: 1px solid #e5e7eb;
+  }
 }
 
 .petit-formal-script-regular {
-  font-family: "Petit Formal Script", cursive;
+  font-family: "Petit Formal Script";
   font-weight: 400;
   font-style: normal;
 }
@@ -1549,3 +1670,14 @@ margin-left: 20px;
   
 }
 
+.serif-head {
+  font-family: serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 2rem;
+}
+
+.basic-info {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+}
