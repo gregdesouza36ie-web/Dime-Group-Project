@@ -197,7 +197,7 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: -200px;
+  margin-bottom: 0px;
 }
 
 .box1 img {
@@ -417,8 +417,9 @@ section {
 }
 
 .info h3{
-    color: rgb(81, 70, 70);
+  color: rgb(81, 70, 70);
   font-size: 4rem;
+  font-family: serif;
   font-weight: 600;
 
 }
