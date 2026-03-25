@@ -1341,15 +1341,11 @@ body {
   position: static;
 }
 
-
-
 @media (max-width 100px) {
-
   .member {
     display: flex;
     flex-direction: column;
   }
-
 }
 /* ========== App ========== */
 .documents,
@@ -1669,7 +1665,6 @@ body {
   margin-bottom: 10px;
 }
 
-/* text */
 .segment-item h3 {
   font-size: 28px;
   margin-bottom: 10px;
@@ -1789,8 +1784,6 @@ body {
   opacity: 0.8;
   margin-bottom: 30px;
 }
-
-/* Stats */
 
 .highlight-stats {
   display: flex;
@@ -1926,7 +1919,6 @@ body {
 .like {
   display: flex;
   justify-content: center;
-  margin-top: -450px;
 }
 .like-box {
   max-width: 1000px;
