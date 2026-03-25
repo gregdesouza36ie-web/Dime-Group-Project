@@ -1593,13 +1593,14 @@ body {
   max-width: 900px;
   margin: 0 auto;
   align-content: center;
-  margin-top: -250px;
+
 }
 
 .overview-card {
   background: white;
   border-radius: 18px;
   padding: 18px;
+  margin: 20px;
   border: 1px solid #ece4e7;
   font-size: 20px;
   border: 1px solid #9a9697;
@@ -1631,6 +1632,7 @@ body {
 .growth-text {
   max-width: 600px;
   margin-bottom: 28px;
+
 }
 
 .section-small,
@@ -1796,6 +1798,79 @@ body {
   color: #666;
   font-size: 18px;
 }
+
+
+@media (max-width: 1068px) {
+
+  .market-section {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+   }
+
+   .market-overview {
+    display:flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+
+  
+   }
+
+   .segments-section {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+     }
+
+  .segment-grid {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+  }
+  
+  .people-section {
+   display: flex;
+   flex-direction: column;
+  }
+
+  .people-grid {
+   display: flex;
+   flex-direction: column;
+  }
+
+  .benefits-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .growth-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*Finance Section*/
 /* Finance Section Improvements */
