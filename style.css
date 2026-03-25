@@ -1341,6 +1341,16 @@ body {
   position: static;
 }
 
+
+
+@media (max-width 100px) {
+
+  .member {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
 /* ========== App ========== */
 .documents,
 .services {
