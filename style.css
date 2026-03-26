@@ -2018,6 +2018,8 @@ body {
   padding: 200px 20px;
   height: auto;
   background-color: rgba(212, 36, 36, 0.88);
+  z-index: -5;
+  position: relative;
 }
 
 .floater-box {
@@ -2029,10 +2031,13 @@ body {
   align-items: center;
   /* background-color: #bb485f;*/
   background-color: hsl(0, 0%, 100%);
-
+  position: relative;
+  overflow: visible;
   border-radius: 20px;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.579);
   color: rgb(0, 0, 0);
+  z-index: 5;
+  isolation: isolate;
 }
 
 .text-box {
@@ -2044,15 +2049,27 @@ body {
   opacity: 0.9;
 }
 
+
+.pop {
+  position: absolute;
+  width: 18%;
+  min-width: 80px;
+  bottom: 530px;
+  right: 11%;
+  z-index: 0;
+}
+
 .float-img {
   padding: 10px;
   border-radius: 15px;
   background-color: #cecece;
+
 }
 
 .float-img img {
   border-radius: 10px;
 }
+
 
 .revenue-graph-section {
   width: 80%;
