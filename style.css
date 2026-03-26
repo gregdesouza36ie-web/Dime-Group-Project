@@ -1978,6 +1978,12 @@ body {
   border-radius: 10px;
 }
 
+
+.pop {
+  position: relative;
+  height: 20vmax;
+  top: 200px;
+}
 /* Financial Summary */
 
 .financial-summary {
