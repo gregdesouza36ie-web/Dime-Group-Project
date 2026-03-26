@@ -2276,7 +2276,7 @@ body {
 /*footer*/
 
 .app-footer {
-  background-color: #000000;
+  background-color: #631414f9;
   color: #ffffff;
   padding: 60px 20px 20px 20px;
   font-family: "Segoe UI", sans-serif;
@@ -2288,7 +2288,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #2c0d0d;
   padding-bottom: 40px;
 }
 
@@ -2349,7 +2349,7 @@ body {
 .footer-bottom {
   text-align: center;
   padding-top: 20px;
-  color: #666;
+  color: #b1b1b1;
   font-size: 0.85rem;
 }
 
