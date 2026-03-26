@@ -217,9 +217,7 @@ h1 {
 
 section {
   width: 100vw;
-  height: 100vh;
   overflow: hidden;
-  min-height: 100vh;
 }
 
 .curtain {
@@ -1232,7 +1230,7 @@ html {
 
 .contribution h1 {
   text-align: center;
-    font-size: clamp(3rem, 8vw, 5rem);
+  font-size: clamp(3rem, 8vw, 5rem);
   margin-bottom: 12px;
 }
 
@@ -1331,6 +1329,7 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   position: static;
+  margin: 0;
 }
 
 .contribution-page,
@@ -1342,19 +1341,16 @@ body {
 }
 
 @media (max-width: 700px) {
-
   .member {
     display: flex;
     flex-direction: column;
     text-align: center;
     max-width: none;
-
   }
 
   .mem-container {
     padding: 0px 0px;
   }
-
 }
 
 @media (max-width: 768px) {
@@ -1613,7 +1609,8 @@ body {
 .growth-section {
   width: 80%;
   margin: 0 auto;
-  padding: 34px 0;
+  padding: 20px 0;
+  margin-bottom: 100px;
 }
 
 /* hero */
@@ -1667,10 +1664,10 @@ body {
 .market-visual {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 30px;
   justify-self: end;
   width: 100%;
-  max-width: 500px;
+  max-width: 1000px;
 }
 
 .chart-card {
@@ -1718,7 +1715,7 @@ body {
 .section-benefit,
 .growth-text {
   max-width: 600px;
-  margin-bottom: 28px;
+  margin-bottom: 16px;
 }
 
 .section-small,
@@ -1753,23 +1750,18 @@ body {
 .segment-grid {
   display: flex;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
-.people-img {
-  width: 170px;
-  height: 170px;
-  object-fit: cover;
-  border-radius: 90px;
-  margin-bottom: 50px;
-  display: block;
-  margin: 0 auto 12px;
+  gap: 30px;
 }
 
+.segment-item:hover {
+  transform: scale(1) translateY(-10px);
+}
 .segment-item {
   background: white;
   border-radius: 22px;
   padding: 22px;
   border: 1px solid #9a9697;
+  transition: scale(1) translateY(-10px);
 }
 
 .segment-icon {
@@ -1795,6 +1787,15 @@ body {
   color: #666;
   font-size: 18px;
 }
+.people-img {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 90px;
+  margin: 0 auto 12px;
+  display: block;
+  margin: 0 auto 12px;
+}
 
 .people-section {
   height: auto;
@@ -1805,7 +1806,7 @@ body {
 .people-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 30px;
 }
 
 .people-card {
@@ -1813,6 +1814,11 @@ body {
   border-radius: 20px;
   border: 1px solid #9a9697;
   padding: 20px;
+  transition: scale(1) translateY(-10px);
+}
+
+.people-card:hover {
+  transform: scale(1) translateY(-10px);
 }
 
 .people-card h3 {
@@ -1839,16 +1845,16 @@ body {
 }
 
 .benefit-box {
-  background: #541313;
+  background: #7b4a54;
   color: white;
   border-radius: 30px;
   padding: 20px;
-  min-height: 92px;
+  min-height: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-weight: 700;
+  font-weight: 300;
   font-size: 28px;
 }
 
@@ -1978,12 +1984,32 @@ body {
   border-radius: 10px;
 }
 
-
-.pop {
-  position: relative;
-  height: 20vmax;
-  top: 200px;
+.revenue-graph-section {
+  width: 80%;
+  margin: 60px auto;
+  text-align: center;
 }
+
+.revenue-graph-section h2 {
+  font-size: 48px;
+  color: rgba(212, 36, 36, 0.88);
+  margin-bottom: 20px;
+}
+
+.revenue-graph {
+  width: 100%;
+  max-width: 800px;
+  border: 2px solid rgba(212, 36, 36, 0.88);
+  border-radius: 16px;
+  padding: 10px;
+  background: #fff;
+}
+
+.graph-description {
+  font-size: 24px;
+  margin-top: 15px;
+}
+
 /* Financial Summary */
 
 .financial-summary {
@@ -2032,6 +2058,7 @@ body {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
+  margin-bottom: 100px;
 }
 
 .comparison-table th,
@@ -2046,6 +2073,7 @@ body {
 .like {
   display: flex;
   justify-content: center;
+  margin-top: 40px;
 }
 .like-box {
   max-width: 1000px;
@@ -2067,11 +2095,13 @@ body {
 }
 
 .get-started {
+  display: inline-block;
   font-size: 35px;
   color: white;
   border-radius: 100px;
   width: max-content;
   text-decoration: none;
-  padding: 10px;
+  padding: 10px 20px;
   background-color: #7b4a54;
+  margin-top: 30px;
 }
