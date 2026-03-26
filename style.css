@@ -1465,7 +1465,6 @@ body {
   }
 }
 /* ========== App ========== */
-
 .innovation-info {
   width: 1000px;
   margin: 60px auto 0;
@@ -1533,6 +1532,87 @@ body {
   line-height: 1.5;
   background: #7b4a54;
   width: 600px;
+}
+
+.innovation-block {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.steps-card-grid {
+  flex: 1;
+}
+
+.innovation-flowchart {
+  flex: 1;
+  margin-top: 40px;
+}
+
+.innovation-flowchart img {
+  width: 95%;
+  max-width: 900px;
+  border-radius: 18px;
+  display: block;
+  margin-right: 60px;
+  border: 2px solid #5a2f36;
+}
+
+.key-features {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 50px;
+}
+
+.keyfeatures-card-grid {
+  display: flex;
+  gap: 40px;
+  overflow-x: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
+}
+
+.keyfeatures-card {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 20px;
+  line-height: 1.7;
+  min-width: 300px;
+  border: 2px solid #e2e8f0;
+}
+
+.target-business-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1300px;
+  margin: 60px auto;
+}
+
+.target-business-block {
+  background: white;
+  color: black;
+  padding: 30px;
+  border-radius: 18px;
+  border: 2px solid #5a2f36;
+}
+
+.target-business-block h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.target-business-block p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.documents {
+  text-align: center;
+  min-height: 1500px;
+  padding: 140px 20px 100px;
 }
 
 .documents,
@@ -1668,6 +1748,71 @@ body {
   font-size: 16px;
   line-height: 1.8;
   color: #f1f5f9;
+}
+.comparison-table {
+  padding: 200px 1% 20px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.comparison-table h2 {
+  font-size: 35px;
+  margin-bottom: 0px;
+  padding-bottom: 10px;
+  color: #7b4a54;
+}
+
+.comparison-table table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 15px;
+  border: 1px solid white;
+  background-color: #7b4a54;
+  color: white;
+  font-size: 25px;
+}
+
+.like {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.like-box {
+  max-width: 1000px;
+  width: 100%;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.like-box h2 {
+  color: #7b4a54;
+  margin-bottom: 20px;
+  font-size: 45px;
+}
+
+.like-box p {
+  margin-bottom: 30px;
+  line-height: 1.6;
+  font-size: 28px;
+}
+
+.get-started {
+  display: inline-block;
+  font-size: 35px;
+  color: white;
+  border-radius: 100px;
+  width: max-content;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #7b4a54;
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
 
 /* Market Section */
@@ -2126,71 +2271,6 @@ body {
   .text-box {
     text-align: center;
   }
-}
-/* Add part to app*/
-.comparison-table {
-  padding: 200px 1% 20px;
-  text-align: center;
-  padding-bottom: 30px;
-}
-
-.comparison-table h2 {
-  font-size: 35px;
-  margin-bottom: 0px;
-  padding-bottom: 10px;
-  color: #7b4a54;
-}
-
-.comparison-table table {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  margin-bottom: 100px;
-}
-
-.comparison-table th,
-.comparison-table td {
-  padding: 15px;
-  border: 1px solid white;
-  background-color: #7b4a54;
-  color: white;
-  font-size: 25px;
-}
-
-.like {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-}
-.like-box {
-  max-width: 1000px;
-  width: 100%;
-  border-radius: 12px;
-  text-align: center;
-}
-
-.like-box h2 {
-  color: #7b4a54;
-  margin-bottom: 20px;
-  font-size: 45px;
-}
-
-.like-box p {
-  margin-bottom: 30px;
-  line-height: 1.6;
-  font-size: 28px;
-}
-
-.get-started {
-  display: inline-block;
-  font-size: 35px;
-  color: white;
-  border-radius: 100px;
-  width: max-content;
-  text-decoration: none;
-  padding: 10px 20px;
-  background-color: #7b4a54;
-  margin-top: 30px;
 }
 
 /*footer*/
