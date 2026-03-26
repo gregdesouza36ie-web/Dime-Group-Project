@@ -1845,7 +1845,7 @@ body {
 }
 
 .benefit-box {
-  background: #6e2626;
+  background: #7b4a54;
   color: white;
   border-radius: 30px;
   padding: 20px;
@@ -1854,7 +1854,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-weight: 700;
+  font-weight: 300;
   font-size: 28px;
 }
 
