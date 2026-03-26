@@ -1329,6 +1329,7 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   position: static;
+  margin: 0;
 }
 
 .contribution-page,
@@ -2057,6 +2058,7 @@ body {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
+  margin-bottom: 100px;
 }
 
 .comparison-table th,
@@ -2071,6 +2073,7 @@ body {
 .like {
   display: flex;
   justify-content: center;
+  margin-top: 40px;
 }
 .like-box {
   max-width: 1000px;
@@ -2092,11 +2095,13 @@ body {
 }
 
 .get-started {
+  display: inline-block;
   font-size: 35px;
   color: white;
   border-radius: 100px;
   width: max-content;
   text-decoration: none;
-  padding: 10px;
+  padding: 10px 20px;
   background-color: #7b4a54;
+  margin-top: 30px;
 }
