@@ -1856,11 +1856,9 @@ body {
 .growth-section {
   width: 80%;
   margin: 0 auto;
-  padding: 20px 0;
   margin-bottom: 100px;
 }
 
-/* hero */
 .market-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1988,10 +1986,7 @@ body {
   color: #390a0a;
 }
 
-.section-main-market p:last-child,
-.section-people p:last-child,
-.growth-text p:last-child {
-  color: black;
+.growth-text p {
   font-size: 20px;
 }
 
@@ -2166,11 +2161,17 @@ body {
   border: 2px solid #9a9697;
 }
 
+.section-benefits {
+  margin-top: 250px;
+}
+
 .growth-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
   align-items: start;
+  margin-top: 200px;
+  margin-bottom: 40px;
 }
 
 .growth-market {
@@ -2185,6 +2186,10 @@ body {
   padding: 18px;
   text-align: center;
   border: 1px solid #9a9697;
+  transition: scale(1) translateY(-5px);
+}
+.market-box:hover {
+  transform: scale(1) translateY(-5px);
 }
 
 .market-box h3 {
