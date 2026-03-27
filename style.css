@@ -2285,11 +2285,16 @@ body {
 
 .text-box {
   text-align: left;
+  font-size: 30px;
+  line-height: 1.6;
 }
 
 .text-box p {
-  font-size: 0.95rem;
+  font-size: 20px;
   opacity: 0.9;
+}
+.basic-info {
+  font-size: 22px;
 }
 
 .pop {
@@ -2326,7 +2331,7 @@ body {
 .revenue-graph {
   width: 100%;
   max-width: 800px;
-  border: 2px solid rgba(212, 36, 36, 0.88);
+  border: 1px solid #b9abab;
   border-radius: 16px;
   padding: 10px;
   background: #fff;
@@ -2336,8 +2341,6 @@ body {
   font-size: 24px;
   margin-top: 15px;
 }
-
-/* Financial Summary */
 
 .financial-summary {
   text-align: center;
@@ -2349,6 +2352,71 @@ body {
 .financial-summary h2 {
   font-size: 2.5rem;
   margin-bottom: 15px;
+}
+
+.financial-section {
+  position: relative;
+  background: linear-gradient(145deg, #ffffff, #f1d1d1ec);
+  border-radius: 25px;
+  padding: 35px 40px;
+  max-width: 900px;
+  margin: 50px auto;
+  border: 1px solid gray;
+}
+
+.financial-section:hover {
+  transform: translateY(-5px);
+}
+
+.financial-section h3 {
+  font-size: 35px;
+  color: #7b2a2a;
+  margin-bottom: 20px;
+  letter-spacing: 1.2px;
+}
+
+.financial-section p {
+  font-size: 22px;
+  line-height: 1.6;
+  color: #2b2b2b;
+  margin-bottom: 18px;
+}
+
+.financial-section ul {
+  margin: 18px 0 22px 25px;
+  padding: 0;
+}
+
+.financial-section ul li {
+  font-size: 22px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.financial-section strong {
+  color: #5c0f0f;
+  font-weight: 600;
+}
+
+.finance-text {
+  font-size: 22px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .financial-section {
+    padding: 25px 22px;
+  }
+
+  .financial-section h3 {
+    font-size: 1.6rem;
+  }
+
+  .financial-section p,
+  .financial-section ul li {
+    font-size: 1rem;
+  }
 }
 
 /* Mobile Fix */
