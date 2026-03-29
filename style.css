@@ -2290,7 +2290,7 @@ body {
   z-index: 5;
   isolation: isolate;
 
-  
+
 }
 
 
@@ -2613,3 +2613,269 @@ body {
     margin: 0 auto 12px auto;
   }
 }
+
+/* ========== Revenue Projection Bento Grid ========== */
+.revenue-projection-section {
+  width: 100%;
+  padding: 200px 0px;
+  background: linear-gradient(135deg, #fcf6ff 0%, #f0e6ff 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+
+.revenue-projection-container {
+  max-width: 1200px;
+
+}
+
+.revenue-projection-title {
+  font-family: serif;
+  font-size: clamp(2.5rem, 6vw, 3.2rem);
+  color: #2c1810;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.revenue-projection-subtitle {
+  font-family: Arial, sans-serif;
+  font-size: 1.1rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  opacity: 0.85;
+}
+
+.bento-grid {
+  display: grid;
+  grid-auto-columns: 0.5fr;
+  grid-auto-rows: 0.5fr;
+  gap: 1.5rem;
+  grid-template-areas:
+    "bento-1 bento-1 bento-2 bento-3"
+    "bento-1 bento-1 bento-4 bento-4"
+    "bento-5 bento-6 bento-7 bento-7";
+}
+
+
+.bento-item {
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.134);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+}
+
+.bento-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12);
+  transition: ease-out;
+}
+
+.bento-content {
+  width: 100%;
+  text-align: center;
+}
+
+.bento-content h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.bento-content h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.3px;
+}
+
+.bento-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-top: 0.5rem;
+}
+
+
+.bento-feature {
+  background: linear-gradient(135deg, #d4a574 0%, #c99a6e 100%);
+  color: #2c1810;
+}
+
+.bento-feature .bento-content h3 {
+  color: #2c1810;
+}
+
+.bento-blue {
+  background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+  color: #fff;
+}
+
+.bento-purple {
+  background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+  color: #fff;
+}
+
+.bento-gold {
+  background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+  color: #fff;
+}
+
+.bento-teal {
+  background: linear-gradient(135deg, #1abc9c 0%, #16a085 100%);
+  color: #fff;
+}
+
+.bento-coral {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  color: #fff;
+}
+
+.bento-burgundy {
+  background: linear-gradient(135deg, #8b2e2e 0%, #6b1f1f 100%);
+  color: #fff;
+}
+
+/* Stat highlight styles */
+.stat-highlight {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  backdrop-filter: blur(5px);
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.8rem 0;
+  font-size: rem;
+}
+
+.stat-label {
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.bento-feature .stat-value {
+  color: #2c1810;
+}
+
+.metric-box {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 1.2rem;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  margin-top: 0.5rem;
+}
+
+.metric-label {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-bottom: 0.3rem;
+}
+
+.metric-value {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 1300px) {
+
+  .revenue-projection-container {
+    max-width: none; 
+  }
+  .bento-grid {
+   grid-auto-columns: 1fr;
+   grid-auto-rows: 0.8fr;
+   grid-template-areas:
+    "bento-1 bento-1"
+    "bento-2 bento-3"
+    "bento-4 bento-4"
+    "bento-5 bento-6"
+    "bento-7 bento-7"
+  }
+}
+
+@media (max-width: 768px) {
+  .bento-grid {
+    padding: 0px 50px;
+  }
+  .revenue-projection-title {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    margin-bottom: 0.3rem;
+  }
+
+  .revenue-projection-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+
+  .bento-item {
+    padding: 1.5rem;
+  }
+
+  .bento-content h3,
+  .bento-content h4 {
+    font-size: 1rem;
+  }
+
+  .metric-value {
+    font-size: 1.8rem;
+  }
+
+  .stat-value {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 580px) {
+
+.bento-grid {
+  padding: 20px;
+
+
+}
+
+  .revenue-projection-title {
+    font-size: 1.8rem;
+  }
+
+  .bento-item {
+    padding: 1.0rem;
+    border-radius: 15px;
+  }
+
+  .bento-content h4 {
+    font-size: 0.9rem;
+  }
+
+  .metric-value {
+    font-size: 1.5rem;
+  }
+
+
+}
+
