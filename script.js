@@ -130,7 +130,6 @@ navbar.addEventListener("mouseleave", () => {
 
 
 
-
 // Initialize a new Lenis instance for smooth scrolling
 const lenis = new Lenis();
 
