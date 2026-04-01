@@ -1470,15 +1470,32 @@ body {
 }
 /* ========== App ========== */
 .innovation-info {
-  width: 1000px;
-  margin: 60px auto 0;
-  border-radius: 12px;
-  padding: 25px 30px;
-  border: 1px solid #e2e8f0;
-  font-size: 20px;
-  line-height: 1.7;
+  max-width: 900px;
+  border-radius: 20px;
+  padding: 40px 45px;
+  border: none;
+  background: linear-gradient(135deg, rgba(248, 249, 250, 1) 0%, rgba(245, 247, 250, 1) 100%);
+  font-size: 18px;
+  line-height: 1.8;
   color: #333;
   margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+
+}
+
+.innovation-info p {
+  margin: 0;
+}
+
+.innovation-info strong {
+  color: rgb(159, 59, 59);
+  font-weight: 600;
+}
+
+.innovation-info b {
+  color: rgb(159, 59, 59);
+  font-weight: 600;
 }
 
 .innovation-title {
@@ -1486,6 +1503,9 @@ body {
   text-align: center;
   margin-bottom: 60px;
   margin-top: 20px;
+  color: rgb(90, 47, 54);
+  font-weight: 700;
+  letter-spacing: -1px;
 }
 
 .main-innovation-card {
@@ -1499,95 +1519,269 @@ body {
 }
 
 .innovation-section {
-  padding: 60px 20px;
-  background: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+  padding-bottom: 200px;
+
 }
 
 .innovation-main {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .key-features {
   text-align: center;
   font-size: 30px;
-  margin-top: 50px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.keyfeatures-title {
+  font-size: 32px;
+  color: rgb(90, 47, 54);
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.5px;
 }
 
 .keyfeatures-card-grid {
   display: flex;
-  gap: 40px;
+  gap: 20px;
   overflow-x: auto;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 20px;
+  padding: 20px 40px;
+  scroll-behavior: smooth;
 }
 
 .keyfeatures-card {
-  background: rgba(229, 222, 222, 0.472);
-  padding: 10px;
-  border-radius: 20px;
-  font-size: 20px;
+  background: linear-gradient(135deg, rgba(220, 120, 120, 0.15) 0%, rgba(159, 59, 59, 0.08) 100%);
+  padding: 25px 30px;
+  border-radius: 16px;
+  font-size: 16px;
   text-align: center;
-  line-height: 1.7;
-  min-width: 400px;
-  border: 1px solid #b3bdc96b;
+  line-height: 1.6;
+  min-width: 380px;
+  border: 1px solid rgba(159, 59, 59, 0.2);
+  color: rgb(90, 47, 54);
+  font-weight: 500;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(159, 59, 59, 0.08);
+  white-space: normal;
+}
+
+.keyfeatures-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(159, 59, 59, 0.15);
+  border-color: rgb(159, 59, 59);
 }
 
 .innovation-card {
   background: #ffffff;
-  padding: 30px 25px;
-  border-radius: 16px;
-  border: 1px solid #e2e8f0;
+  padding: 35px 30px;
+  border-radius: 18px;
+  border: 1px solid rgba(159, 59, 59, 0.15);
   text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(159, 59, 59, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.innovation-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(220, 120, 120, 0.1) 0%, rgba(159, 59, 59, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.innovation-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .innovation-head {
   font-size: 45px;
-  color: #000000;
-  margin-bottom: 10px;
+  color: rgb(90, 47, 54);
+  margin-bottom: 15px;
   margin-top: 50px;
+  font-weight: 700;
+  letter-spacing: -1px;
 }
 
 .innovation-subtitle {
   font-size: 22px;
-  color: #2b0c0c;
+  color: rgb(159, 59, 59);
   max-width: 800px;
   margin: 0 auto;
+  font-weight: 500;
 }
 
 .innovation-card-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 40px;
-  max-width: 1500px;
-  margin: 0 auto;
+  gap: 30px;
+  max-width: 1600px;
+  margin: 50px auto 0;
+  padding: 0 20px;
 }
 
 .innovation-card:hover {
-  transform: translateY(-5px);
-  border-color: #5a2f36;
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(159, 59, 59, 0.25);
+  border-color: rgb(159, 59, 59);
+}
+
+.innovation-card:hover::before {
+  opacity: 0;
 }
 
 .innovation-icons {
-  font-size: 50px;
-  margin-bottom: 10px;
-  display: inline-block;
-  background: rgba(200, 192, 193, 0.31);
-  padding: 15px;
-  border-radius: 20%;
+  font-size: 60px;
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(220, 120, 120, 0.2) 0%, rgba(159, 59, 59, 0.1) 100%);
+  padding: 20px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+
+.innovation-card:hover .innovation-icons {
+  background: linear-gradient(135deg, rgba(220, 120, 120, 0.4) 0%, rgba(159, 59, 59, 0.2) 100%);
+  transform: scale(1.1) rotate(5deg);
 }
 
 .innovation-card h3 {
-  font-size: 30px;
-  color: #5a2f36;
-  margin-bottom: 10px;
+  font-size: 22px;
+  color: rgb(90, 47, 54);
+  margin-bottom: 15px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
 
 .innovation-card p {
-  font-size: 18px;
-  color: #6b7280;
+  font-size: 16px;
+  color: #555;
   line-height: 1.7;
+  font-weight: 400;
+}
+
+/* Responsive Innovation Grid */
+@media (max-width: 1400px) {
+  .innovation-card-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .innovation-card-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .innovation-info {
+    width: 90%;
+    padding: 30px 25px;
+  }
+
+  .innovation-icons {
+    font-size: 50px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .innovation-card h3 {
+    font-size: 20px;
+  }
+
+  .innovation-card p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .innovation-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .innovation-section {
+    padding: 60px 15px;
+  }
+
+  .innovation-title {
+    font-size: 36px;
+  }
+
+  .innovation-head {
+    font-size: 32px;
+  }
+
+  .innovation-card {
+    padding: 25px 20px;
+  }
+
+  .innovation-icons {
+    font-size: 40px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .innovation-card h3 {
+    font-size: 18px;
+  }
+
+  .innovation-card p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  .innovation-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .innovation-info {
+    width: 95%;
+    font-size: 16px;
+  }
+
+  .innovation-title {
+    font-size: 28px;
+  }
+
+  .innovation-head {
+    font-size: 26px;
+    margin-top: 30px;
+  }
+
+  .innovation-icons {
+    font-size: 36px;
+    width: 65px;
+    height: 65px;
+  }
+
+  .innovation-card h3 {
+    font-size: 16px;
+  }
+
+  .innovation-card p {
+    font-size: 13px;
+  }
 }
 
 .steps-card-grid {
@@ -2262,6 +2456,7 @@ body {
 /* Revenue model section */
 
 .rev-model {
+  font-family: 'Helvetica Neue', 'Inter', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2294,11 +2489,20 @@ body {
   z-index: 5;
   isolation: isolate;
 }
+.text-box {
+  display: flex;
 
+  flex-direction: column;
+
+}
 .text-box p {
-  font-size: clamp(1.1rem, 1.4vw, 2.5rem);
-  line-height: 1.2;
+  font-size: clamp(1.1rem, 1.1vw, 2.0rem);
+  color: #322b2b;
+  line-height: 1.5;
   opacity: 0.9;
+  font-weight: 100;
+  max-width: 500px;
+
 }
 .text-box h4 {
   font-size: clamp(1.8rem, 3vw, 6rem);
@@ -2329,6 +2533,116 @@ body {
 
 .float-img img {
   border-radius: 10px;
+}
+
+/* Subscription Model Styles */
+.subscription-model-box,
+.freemium-model-box {
+  flex-direction: row;
+  align-items: stretch;
+  padding: 0 !important;
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  background-image: none !important;
+  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.1) !important;
+  max-width: 900px;
+  gap: 0 !important;
+  overflow: hidden;
+}
+
+.model-image {
+  flex: 0 0 35%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px 0 0 20px;
+  background-color: #f0f0f0;
+}
+
+.model-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.model-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 40px;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.model-text-top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.model-title {
+  font-size: 2rem;
+  color: #1a3a4a;
+  font-weight: 700;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.model-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 400;
+}
+
+.freemium-services,
+.subscription-services {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.service-card {
+  padding: 18px;
+  background-color: rgba(83, 207, 198, 0.15);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0px 8px 20px rgba(83, 207, 198, 0.2);
+  transform: translateY(-3px);
+}
+
+.service-icon {
+  font-size: 1.8rem;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(75, 120, 150, 0.2);
+  border-radius: 50%;
+}
+
+.service-title {
+  font-size: 1.1rem;
+  color: #1a3a4a;
+  font-weight: 600;
+  margin: 0;
+}
+
+.service-description {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 400;
 }
 
 .revenue-graph-section {
@@ -2380,10 +2694,30 @@ body {
 
   .floater-box {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     width: 90%;
-    scale: 0.7;
+    scale: 0.9;
   }
+
+  .subscription-model-box,
+  .freemium-model-box {
+    flex-direction: column;
+  }
+
+  .model-image {
+    flex: 0 0 250px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .model-content {
+    padding: 30px;
+  }
+
+  .freemium-services,
+  .subscription-services {
+    gap: 12px;
+  }
+
   .text-box {
     max-width: 500px;
   }

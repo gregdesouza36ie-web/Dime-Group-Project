@@ -1,0 +1,191 @@
+/* --- Global Styles --- */
+/* Simple reset and font definition for a modern look */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+/* 1. Main Section Container */
+.rev-model {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Fills viewport */
+    height: auto;
+    padding: 100px 20px; /* Reduced padding from original 200px */
+    background-color: #d11f1f; /* A cleaner, solid professional red */
+    position: relative;
+    overflow: hidden; /* Prevent coins from causing horizontal scrollbars */
+    z-index: 1; /* Reset z-index from -5 for visibility */
+}
+
+/* 2. Central Content Wrapper (Holds the cards in a column) */
+.rev-model-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px; /* Healthy vertical spacing between cards */
+    z-index: 5;
+}
+
+/* 3. The Individual Card Structure (Dynamic & depth) */
+.rev-card {
+    display: flex;
+    flex-direction: column; /* Standard stacked on mobile */
+    background-color: rgba(255, 255, 255, 0.96); /* Very slight transparency */
+    
+    /* Integration: Watercolor leaves texture inside the card, but clean */
+    background-image: url("images/bgleaves.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    padding: 50px; /* Balanced inner breathing room */
+    gap: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle depth edge */
+    
+    /* Modern soft depth shadow: multiple layers create depth, not a heavy box */
+    box-shadow: 
+        0 10px 20px rgba(0,0,0,0.08), 
+        0 4px 6px rgba(0,0,0,0.06);
+    
+    overflow: visible; /* Essential for floating elements and hover pops */
+    position: relative;
+    
+    /* COOL Micro-interaction: Smooth transition on hover for entire card */
+    transition: all 0.5s ease-out;
+}
+
+/* 3.1 Hover Effect - A subtle shift up and deepened shadow */
+.rev-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 
+        0 20px 40px rgba(0,0,0,0.15), 
+        0 8px 12px rgba(0,0,0,0.10);
+}
+
+/* 4. Column Wrappers (Image & Content) */
+.card-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Images take proportional space on desktop */
+}
+
+.card-content {
+    flex: 1.2; /* Text content gets slightly more width than the image */
+    display: flex;
+    justify-content: center;
+}
+
+/* 5. Typography */
+.text-box h4 {
+    font-size: clamp(2rem, 3.2vw, 4rem); /* Refined sizing */
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #570000; /* Dark authoritative red/brown for contrast */
+}
+
+/* Professional Detail: Separator Line under Title */
+.card-separator {
+    width: 80px;
+    height: 4px;
+    background-color: #570000;
+    margin-bottom: 30px;
+    border-radius: 2px;
+}
+
+.description-text {
+    font-size: clamp(1.1rem, 1.2vw, 1.6rem); /* Modern optimal reading size */
+    line-height: 1.7; /* Crucial improvement for readability */
+    color: #1a1a1a; /* Dark gray, softer on eyes than black */
+    opacity: 0.95;
+}
+
+/* 6. Main Image Styling */
+.card-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px; /* Clean, modern border radius */
+    
+    /* Adds depth to the images within the card */
+    filter: drop-shadow(0 8px 15px rgba(0,0,0,0.1));
+    
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+/* Visual Interaction: Images subtle zoom on card hover */
+.rev-card:hover .card-img {
+    transform: scale(1.03);
+}
+
+/* 7. Decoration: Subtle Floating Coins (.pop) in background */
+.pop {
+    position: absolute;
+    min-width: 60px;
+    filter: drop-shadow(0 4px 10px rgba(212, 175, 55, 0.4)); /* Soft golden coin glow */
+    opacity: 0.9;
+    z-index: 2; /* Sits behind the cards */
+}
+
+/* Left side decoration */
+.pop-left {
+    width: 8%;
+    top: 15%;
+    left: 8%;
+    opacity: 0.6;
+}
+
+/* Right side decoration */
+.pop-right {
+    width: 5%;
+    bottom: 25%;
+    right: 6%;
+}
+
+/* ============================================== */
+/* --- 8. Media Queries for Pro Responsiveness --- */
+/* ============================================== */
+
+/* A. Desktop (Side-by-side) */
+@media (min-width: 800px) {
+    /* 1. Shift cards from stacked (mobile) to side-by-side */
+    .rev-card {
+        flex-direction: row;
+        align-items: center; /* Vertically center image and text */
+        gap: 60px;
+        padding: 60px;
+    }
+    
+    /* 2. The second card (Subscription) should reverse flow (text left, image right) */
+    .card-subscription {
+        flex-direction: row-reverse;
+    }
+}
+
+/* B. Mobile (Vertical Stack) */
+@media (max-width: 799px) {
+    /* On mobile, stack content with reduced padding and text sizes */
+    .rev-model {
+        padding: 60px 15px;
+    }
+    
+    .rev-model-container {
+        gap: 60px;
+    }
+    
+    .rev-card {
+        padding: 30px;
+        gap: 30px;
+    }
+    
+    .card-img {
+        max-height: 25vmax; /* Control max height of image on mobile screens */
+    }
+}
