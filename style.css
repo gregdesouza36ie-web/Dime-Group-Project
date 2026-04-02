@@ -1564,6 +1564,7 @@ html {
   height: 200px;
   object-fit: cover;
   border-radius: 20px;
+  border: 1px solid rgb(159, 59, 59);
   flex-shrink: 0;
   background: rgb(159, 59, 59);
 }
@@ -2929,10 +2930,8 @@ body {
   border-radius: 50%;
 }
 .service-card img {
-
   height: 5vh;
   margin-bottom: -10px;
-
 }
 .service-title {
   font-size: 1.1rem;
