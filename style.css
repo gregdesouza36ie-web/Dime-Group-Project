@@ -2920,16 +2920,20 @@ body {
 }
 
 .service-icon {
-  font-size: 1.8rem;
-  width: 45px;
-  height: 45px;
+  font-size: 1.5rem;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(75, 120, 150, 0.2);
+  background-color: rgb(75, 120, 150);
   border-radius: 50%;
 }
+.service-card img {
 
+  height: 5vh;
+  margin-bottom: -10px;
+
+}
 .service-title {
   font-size: 1.1rem;
   color: #1a3a4a;
